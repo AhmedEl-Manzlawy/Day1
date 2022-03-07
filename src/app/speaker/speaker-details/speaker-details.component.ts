@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { SpeakerService } from 'src/app/speaker.service';
 import { Speaker } from 'src/app/_models/speaker';
 
 @Component({
@@ -6,7 +7,7 @@ import { Speaker } from 'src/app/_models/speaker';
   templateUrl: './speaker-details.component.html',
   styleUrls: ['./speaker-details.component.css']
 })
-export class SpeakerDetailsComponent implements OnInit {
+export class SpeakerDetailsComponent implements OnInit , OnChanges {
 
   @Input() speakers:Speaker={
     "_id":1,
@@ -21,7 +22,10 @@ export class SpeakerDetailsComponent implements OnInit {
   }
   pageTitle='Speaker Details';
   // speakers:Speaker;
-  constructor() { }
+  constructor( public speakersService:SpeakerService) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    // this.speakers = this.speakersService.getSpeakersById
+  }
 
   ngOnInit(): void {
   }

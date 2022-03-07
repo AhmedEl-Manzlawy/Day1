@@ -294,7 +294,7 @@
       </tr>
   </thead>
           <!-- <td>{{i.hour_rate|powerTox:2}}</td> -->
-  <!-- <tbody>
+  <tbody>
       <tr *ngFor="let i of speakers |arraySplice:searchValue" >
           <td>{{i._id}}</td>
           <td>{{i.name|stringConvert}}</td>
@@ -313,8 +313,8 @@
           |<button class="btn btn-success" (click)="showDetails(i)" *ngIf="isClicked" >Details</button>|
           </td>
       </tr>
-  </tbody> -->
-  <tbody>
+  </tbody>
+  <!-- <tbody>
     <tr *ngFor="let i of speakers |arraySplice:searchValue">
         <td>
             <input type="number"  [(ngModel)]="i._id" [disabled]="!isEditable" style="width: 50px;">
@@ -348,7 +348,7 @@
       |<button class="btn btn-success" (click)="showDetails(i)" *ngIf="isClicked" >Details</button>|
       </td>
     </tr>
-</tbody>
+</tbody> -->
   </table>
 </div>
 

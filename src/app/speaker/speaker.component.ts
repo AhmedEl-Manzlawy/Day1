@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { SpeakerService } from '../speaker.service';
 import { Speaker } from '../_models/speaker';
 
 @Component({
@@ -13,7 +14,8 @@ export class SpeakerComponent implements OnInit {
   counterId() {
     return this.idCounter++;
   }
-  speaker:Speaker={
+
+  @Output() speaker:Speaker={
     "_id":this.idCounter,
     "address":'side Gaber',
     "government":'alex',
@@ -52,6 +54,7 @@ export class SpeakerComponent implements OnInit {
   //     "name":"Mohamed"
   //   }
   // ];//test
+  isUpdated:boolean =false;
   addSpeaker() {
     this.speaker._id = this.counterId();
     this.speakers.push({_id:this.speaker._id,
@@ -64,7 +67,11 @@ export class SpeakerComponent implements OnInit {
                         image:this.speaker.image,
                         starRating:this.speaker.starRating
                         });
+    if(this.isUpdated)
+    this.speakersService.addSpeaker(this.speaker);
   }
+
+
   delete(n:number){
     for (let index = 0; index < this.speakers.length; index++) {
       if(this.speakers[index]._id==n)
@@ -74,7 +81,7 @@ export class SpeakerComponent implements OnInit {
       }
   }
 }
-isUpdated:boolean =false;
+
 updateIndex: number = -1;
   update(n:number){
     this.isUpdated = !this.isUpdated;
@@ -117,9 +124,13 @@ updateIndex: number = -1;
   }
   isEditable = false;
   isClicked=true;
-  constructor() { }
+
+  constructor( public speakersService:SpeakerService) {
+    this.speakers =speakersService.getAllSpeakers();
+  }
 
   ngOnInit(): void {
+    this.speakers=this.speakersService.getAllSpeakers();
   }
 
 }
