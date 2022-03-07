@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Day1';
+  num=1;
+
+  syntax:string="Stars Number";
+
+  myFun(n:number){
+    this.syntax="star Clicked :"+" "+ n;
+  }
 }

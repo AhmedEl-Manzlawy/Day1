@@ -1,0 +1,45 @@
+<p>test works!</p>
+<div>
+  <div>password : </div>
+  <div><p-password></p-password></div>
+</div>
+
+<div>
+  <div>Calendar: </div>
+  <div><p-calendar [(ngModel)]="value"></p-calendar></div>
+</div>
+
+<div>
+  <div>ColorPicker: </div>
+  <div><p-colorPicker [(ngModel)]="color"></p-colorPicker></div>
+</div>
+
+
+<div>
+  <div>button: </div>
+  <div><button pButton type="button" label="Click" ></button></div>
+  <div>button: </div>
+  <div><button pButton type="button" icon="pi pi-check" iconPos="left"></button></div>
+  <div>button: </div>
+  <div><button pButton type="button" label="Small" icon="pi pi-check" [loading]="isLoading" ></button></div>
+  <div>button: </div>
+  <div><button pButton type="button" label="Delete" icon="pi pi-trash"></button>
+  </div>
+  <div><button pButton type="button" label="Messages" icon="pi pi-users" class="p-button-warning" badge="8" badgeClass="p-badge-info"></button>
+ </div>
+
+ <p-toolbar>
+  <div class="p-toolbar-group-left">
+      <p-button label="New" icon="pi pi-plus"></p-button>
+      <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
+
+      <i class="pi pi-bars"></i>
+
+      </div>
+
+  <div class="p-toolbar-group-right">
+      <p-button icon="pi pi-search"></p-button>
+      <p-button icon="pi pi-calendar" styleClass="p-button-success"></p-button>
+      <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+  </div>
+</p-toolbar>

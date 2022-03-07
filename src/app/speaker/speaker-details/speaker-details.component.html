@@ -1,0 +1,67 @@
+<div class='card' *ngIf='speakers'>
+  <div class='card-header'>
+    {{pageTitle + ': ' + speakers.name}}
+  </div>
+
+  <div class='card-body'>
+    <div class='row'>
+      <div  class='col-md-8'>
+
+        <div class='row'>
+          <div class='col-md-4'>ID :</div>
+          <div class='col-md-8'>{{speakers._id}}</div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Name :</div>
+          <div class='col-md-8'>{{speakers.name|stringConvert}}</div>
+
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Address :</div>
+          <div class='col-md-8'>{{speakers.address|stringConvert}}</div>
+
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Government :</div>
+          <div class='col-md-8'>{{speakers.government|stringConvert}}</div>
+
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Birth Date :</div>
+          <div class='col-md-8'>{{speakers.bdate|date}}</div>
+
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Status -> isMarrid? :</div>
+          <div class='col-md-8'>{{speakers.isMarrid}}</div>
+
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Price Per Hours :</div>
+          <div class='col-md-8'>{{speakers.hour_rate|currency}}</div>
+
+        </div>
+
+        <div class='row'>
+          <div class='col-md-4'>Rate :</div>
+          <div class='col-md-8'><app-stars [rating]="speakers.starRating"></app-stars></div>
+
+        </div >
+
+
+
+      </div>
+       <div class='col-md-4'>
+            <img class='center-block img-responsive'
+            width="300px" height="300px"
+            src="../../assets/{{speakers.image}}">
+            </div>
+    </div>
+  </div>
+</div>

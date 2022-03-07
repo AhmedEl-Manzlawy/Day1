@@ -1,0 +1,386 @@
+<!-- <div>
+  {{speaker.name}}
+</div> -->
+
+<!-- Start form  -->
+<!-- <section class="h-100 h-custom" style="background-color: #97a09eea;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <div class="card-body p-4 p-md-4">
+            <h3 class="mb-2 pb-2 pb-md-0 mb-md-2 px-md-2">Registration Speakers</h3>
+            <form class="px-md-2">
+              <div class="form-outline mb-1">
+                <label class="form-label" for="name">Name</label>
+                <input
+                #tname
+                class="form-control"
+                [(ngModel)]="speaker.name"
+                id="name"
+                type="text"
+                />
+              </div>
+
+              <div class="form-outline mb-1">
+                <label class="form-label" for="address">Address</label>
+                <input
+                #taddress
+                type="text"
+                id="address"
+                [(ngModel)]="speaker.address"
+                class="form-control"
+                />
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-2">
+                  <div class="form-outline datepicker">
+                    <label for="birth_date" class="form-label">Birth Date</label>
+                    <input
+                    #tbdate
+                    type="date"
+                    class="form-control"
+                    [(ngModel)]="speaker.bdate"
+                    id="birth_date"
+                    />
+                  </div>
+                </div>
+
+              </div>
+              <div>
+                <div class="form-check">
+                  <label class="form-check-label" for="isMarrid">
+                    isMarrid
+                  </label>
+                  <input
+                  #tmarrid
+                  class="form-check-input"
+                  type="checkbox"
+                  [(ngModel)]="speaker.isMarrid"
+                  id="isMarrid">
+                </div>
+
+              </div>
+              <div class="form-outline mb-2">
+                <label class="form-label" for="hour">Price Per Hours</label>
+                <input
+                #thour
+                type="text"
+                id="hour"
+                [(ngModel)]="speaker.hour_rate"
+                class="form-control" />
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="image" class="form-label">Image</label>
+                <input
+                #timage
+                class="form-control form-control-sm"
+                id="image"
+                [(ngModel)]="speaker.image"
+                type="file"
+                />
+              </div>
+
+              <button
+              type="submit"
+              class="btn btn-success btn-lg mb-1 "
+              (click)="addSpeaker()">ADD Speaker</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End Form -->
+
+<!-- <div>
+  {{speaker.address}} :{{speaker.name}}:{{speaker.government}}
+</div>
+<input type="text" [(ngModel)]="speaker.name"> -->
+<!-- #### -->
+
+<!-- test powerTox -->
+<!-- <div>
+  {{3|powerTox:3}}
+</div> -->
+
+<!-- #### -->
+
+
+<!-- form -->
+<div class="container d-flex  justify-content-center align-items-center  my-5">
+  <div class="m-2 col-4">
+    <div class="form-group ">
+      <label class="form-label" for="name">Name</label>
+        <input
+        #tname
+        class="form-control"
+        [(ngModel)]="speaker.name"
+        id="name"
+        type="text"
+        placeholder="Enter UR Name"
+        />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="address">Address</label>
+      <input
+      #taddress
+      type="text"
+      id="address"
+      [(ngModel)]="speaker.address"
+      class="form-control"
+      placeholder="Enter UR Address"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="government">Government</label>
+      <input
+      #tgovernment
+      type="text"
+      id="government"
+      [(ngModel)]="speaker.government"
+      class="form-control"
+      placeholder="Enter UR Government"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="birth_date" class="form-label">Birth Date</label>
+      <input
+      #tbdate
+      type="date"
+      class="form-control"
+      [(ngModel)]="speaker.bdate"
+      id="birth_date"
+      placeholder="Enter UR BirthDate"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="form-check-label" for="isMarrid">
+        isMarrid
+      </label>
+      <input
+      #tmarrid
+      class="form-check-input"
+      type="checkbox"
+      [(ngModel)]="speaker.isMarrid"
+      id="isMarrid">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="hour">Price Per Hours</label>
+      <input
+      #thour
+      type="text"
+      id="hour"
+      [(ngModel)]="speaker.hour_rate"
+      class="form-control"
+      placeholder="Enter UR Price"/>
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="image" class="form-label">Image</label>
+      <input
+      #timage
+      class="form-control form-control-sm"
+      id="image"
+      [(ngModel)]="speaker.image"
+      type="file"
+      />
+    </div> -->
+
+    <div class="form-group">
+      <label for="image">image</label>
+      <input
+        #timage
+        class="form-control"
+        [(ngModel)]="speaker.image"
+        id="image"
+        type="text"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="starRating">starRating</label>
+      <select
+      #tsrating
+      class="form-control"
+      id="starRating"
+      [(ngModel)]="speaker.starRating"
+      >
+        <option >1</option>
+        <option >2</option>
+        <option >2.5</option>
+        <option >3</option>
+        <option >3.5</option>
+        <option >4</option>
+        <option >4.5</option>
+        <option >5</option>
+      </select>
+    </div>
+
+
+
+    <button
+    type="submit"
+    class="btn btn-dark btn-lg mb-1  mt-3 col-5 p-1"
+    (click)="addSpeaker()" *ngIf="!isUpdated">
+    ADD Speaker
+  </button>
+
+    <div  *ngIf="isUpdated">
+      <button
+    type="submit"
+    class="btn btn-dark btn-lg mb-1  m-3 col-3 p-1"
+    (click)="updateSpeaker()"
+     >UPDATE </button>
+     <button
+    type="submit"
+    class="btn btn-dark btn-lg mb-1  m-3 col-3 p-1"
+    (click)="cancel()"
+     >CANCEL </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- end Form -->
+<div class='card' *ngIf="speakers.length>0">
+  <div class='card-header'>
+   <h3>
+     {{title}}
+   </h3>
+  </div>
+
+  <div class='card-body'>
+
+    <div class='row'>
+      <label for="search" class="col-md-2">Filter by</label>
+      <div  class="col-md-2 mb-2">
+        <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
+      </div>
+    </div>
+<!-- table -->
+<div class='table-responsive'>
+  <table class="table table-bordered table-hover table-striped" *ngIf="speakers.length>0">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Government</th>
+          <th>Birth Date</th>
+          <th>Status</th>
+          <th>Price Per Hours</th>
+          <!-- <th>Image</th> -->
+          <th>
+            <button class='btn btn-primary'
+                    (click)='toggleImage()'>
+              {{showImage ? 'Hide' : 'Show'}} Image
+            </button>
+          </th>
+          <th>Rate</th>
+          <th>Operation</th>
+          <!-- <th>Delete</th> -->
+          <!-- <th>Update</th> -->
+      </tr>
+  </thead>
+          <!-- <td>{{i.hour_rate|powerTox:2}}</td> -->
+  <!-- <tbody>
+      <tr *ngFor="let i of speakers |arraySplice:searchValue" >
+          <td>{{i._id}}</td>
+          <td>{{i.name|stringConvert}}</td>
+          <td>{{i.address|stringConvert}}</td>
+          <td>{{i.government|stringConvert}}</td>
+          <td>{{i.bdate|date}}</td>
+          <td>{{i.isMarrid}}</td>
+          <td>{{i.hour_rate|currency:'USD' }}</td>
+          <td><img *ngIf='showImage' width="100px" height="50px" src="../../assets/{{i.image}}"></td>
+          <td>
+            <app-stars [rating]="i.starRating" ></app-stars>
+          </td>
+          <td>
+          |<button  class="btn btn-danger" (click)="delete(i._id)"> Delete</button>|
+          |<button  class="btn btn-warning" (click)="update(i._id)"> UPDate</button>|
+          |<button class="btn btn-success" (click)="showDetails(i)" *ngIf="isClicked" >Details</button>|
+          </td>
+      </tr>
+  </tbody> -->
+  <tbody>
+    <tr *ngFor="let i of speakers |arraySplice:searchValue">
+        <td>
+            <input type="number"  [(ngModel)]="i._id" [disabled]="!isEditable" style="width: 50px;">
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="i.name" [disabled]="!isEditable" style="width: 70px;">
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="i.address" [disabled]="!isEditable" style="width: 70px;">
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="i.government" [disabled]="!isEditable" style="width: 70px;">
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="i.bdate" [disabled]="!isEditable" style="width: 100px;">
+        </td>
+        <td>
+          {{i.isMarrid}}
+        </td>
+      <td>
+        <input type="text" [(ngModel)]="i.hour_rate" [disabled]="!isEditable" style="width: 70px;">
+    </td>
+    <td><img *ngIf='showImage' width="100px" height="50px" src="../../assets/{{i.image}}"></td>
+    <td>
+      <app-stars [rating]="i.starRating" ></app-stars>
+    </td>
+    <td>
+      |<button  class="btn btn-danger" (click)="delete(i._id)"> Delete</button>|
+      |<button  class="btn btn-warning" (click)="isEditable=!isEditable" *ngIf="!isEditable"> UPDate</button>|
+      |<button  class="btn btn-warning" (click)="updateSpeaker()" *ngIf="isEditable"> Save</button>|
+      |<button class="btn btn-success" (click)="showDetails(i)" *ngIf="isClicked" >Details</button>|
+      </td>
+    </tr>
+</tbody>
+  </table>
+</div>
+
+<div *ngIf="speakers.length>0">
+
+  <app-speaker-details  [speakers]="speakerDetails"  ></app-speaker-details>
+
+</div>
+
+  </div>
+  </div>
+
+
+
+
+<!-- test directive -->
+<!-- <div class="a" appHighlight dcolor="yellow" >
+  <p>Hello Ahmed</p>
+</div> -->
+
+<!-- test directive Two -->
+<!-- <div class="a" appHighlight="green" >
+  <p>Hello Ahmed</p>
+</div> -->
+
+<!-- test directive Three -->
+<!-- <div class="a" appHighlight="green" highlightcolor="purple" >
+  <p>Hello Ahmed</p>
+</div> -->
+
+
+<!-- test ngClass -->
+<!-- <div [ngClass]="{'col':true,'a':true,'g':true}">
+  test ngClass
+</div> -->
